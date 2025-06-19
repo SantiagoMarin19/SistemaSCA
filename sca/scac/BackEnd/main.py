@@ -10,7 +10,13 @@ app = FastAPI()
 # Configurar middleware CORS para permitir las solicitudes desde el frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5174","http://127.0.0.1:8001"],  # Cambia esto si tu frontend está en otra URL
+    allow_origins=[
+        "http://localhost:5174",
+        "http://127.0.0.1:8001",
+        "https://sistema-sca.vercel.app",
+        "https://sistema-sca-git-main-santiago-marin-s-projects.vercel.app",
+        "https://sistema-sca-santiago-marin-s-projects.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
