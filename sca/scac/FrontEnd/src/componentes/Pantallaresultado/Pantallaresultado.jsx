@@ -1,5 +1,7 @@
 import React from "react";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 function Pantallaresult({ file1, file2, file3, handleScreenChange , codigoFicha}) {
   const handleSubmit = async () => {
     if (!file1 || !file2 || !file3) {
@@ -13,7 +15,7 @@ function Pantallaresult({ file1, file2, file3, handleScreenChange , codigoFicha}
     formData.append("file3", file3);
 
     try {
-      const response = await fetch("http://127.0.0.1:8001/api/process-files/", {
+      const response = await fetch(`${apiUrl}/process-files/`, {
         method: "POST",
         body: formData,
       });

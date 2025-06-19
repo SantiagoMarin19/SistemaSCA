@@ -3,6 +3,8 @@ import update from '../../assets/img/upload.png';
 import sena from '../../assets/img/logosena.png';
 import "./Unificacion.css";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 function Unificacion({ handleLogout }) {
     const [file1, setFile1] = useState(null);
     const [file2, setFile2] = useState(null);
@@ -20,7 +22,7 @@ function Unificacion({ handleLogout }) {
         formData.append("file_instru", file);
 
         try {
-            const response = await fetch("http://127.0.0.1:8001/api/get-codigo-ficha", {
+            const response = await fetch(`${apiUrl}/get-codigo-ficha`, {
                 method: "POST",
                 body: formData,
             });
@@ -89,7 +91,7 @@ function Unificacion({ handleLogout }) {
         if (file3) formData.append("file3", file3);
 
         try {
-            const response = await fetch("http://127.0.0.1:8001/api/validate-files", {
+            const response = await fetch(`${apiUrl}/validate-files`, {
                 method: "POST",
                 body: formData,
             });
@@ -116,7 +118,7 @@ function Unificacion({ handleLogout }) {
         if (file3) formData.append("file3", file3);
 
         try {
-            const response = await fetch("http://127.0.0.1:8001/api/generate-results", {
+            const response = await fetch(`${apiUrl}/generate-results`, {
                 method: "POST",
                 body: formData,
             });

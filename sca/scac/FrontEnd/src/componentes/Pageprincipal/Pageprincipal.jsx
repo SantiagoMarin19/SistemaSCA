@@ -9,6 +9,8 @@ import PantallaInstruSofia from "../PantallaInstruSofia/PantallaInstruSofia";
 
 import "./Pageprincipal.css";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 function PagePrincipal({ handleLogout }) {
   const navigate = useNavigate();
 
@@ -26,7 +28,7 @@ function PagePrincipal({ handleLogout }) {
     formData.append("file_instru", file);
   
     try {
-      const response = await fetch("http://127.0.0.1:8001/api/get-codigo-ficha", {
+      const response = await fetch(`${apiUrl}/get-codigo-ficha`, {
         method: "POST",
         body: formData,
       });

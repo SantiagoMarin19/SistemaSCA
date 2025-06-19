@@ -3,6 +3,8 @@ import "./Inicio.css";
 import sena from '../../assets/img/logosena.png';
 import axios from "axios";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 const Inicio = ({ setToken }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -12,7 +14,7 @@ const Inicio = ({ setToken }) => {
         try {
             // Enviar credenciales al backend
             const response = await axios.post(
-                "http://127.0.0.1:8001/api/token",
+                `${apiUrl}/token`,
                 new URLSearchParams({
                     username: username,
                     password: password,

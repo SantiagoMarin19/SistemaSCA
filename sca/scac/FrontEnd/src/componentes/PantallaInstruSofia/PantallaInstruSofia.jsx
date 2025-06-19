@@ -1,6 +1,8 @@
 import React from "react";
 import './PantallaInstruSofia.css'
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 function PantallaInstruSofia({ file1, file2, handleScreenChange , codigoFicha }) {
     const handleSubmit = async () => {
         if (!file1 || !file2) {
@@ -13,7 +15,7 @@ function PantallaInstruSofia({ file1, file2, handleScreenChange , codigoFicha })
         formData.append("file2", file2);
 
         try {
-            const response = await fetch("http://127.0.0.1:8001/api/process-comparacion/", {
+            const response = await fetch(`${apiUrl}/process-comparacion/`, {
                 method: "POST",
                 body: formData,
             });
