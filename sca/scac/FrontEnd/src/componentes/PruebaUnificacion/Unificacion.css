@@ -1,0 +1,293 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Container for the entire screen */
+.Contenedorprincipal {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left column */
+.columnaizquierda {
+    width: 200px;
+    background-color: #0B1739;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.letrascolumna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgsena {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.Enlances {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Enlances span {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.enlacesabajo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttoncerrar {
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.derechosreservados {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Main content */
+.unificacionScreen {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: calc(100% - 200px);
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background-color: #1E3A8A;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-subtitle {
+    font-size: 14px;
+}
+
+/* Main content */
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Steps container */
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #e0e0e0;
+    color: #1E3A8A;
+}
+
+.step-number.completed {
+    background-color: #4caf50;
+    color: white;
+}
+
+.step-title {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #1E3A8A;
+}
+
+/* File upload container */
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* File upload section */
+.file-upload-section {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.file-upload-section h2 {
+    color: #1E3A8A;
+    margin-bottom: 10px;
+}
+
+/* Custom div for file upload */
+.custom-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-width: 3px;
+    border-style: dashed;
+    border-color: #bfdbfe;
+    border-radius: 16px;
+    height: 200px;
+    padding: 32px;
+    text-align: center;
+    background: linear-gradient(to bottom, #ebf8ff, #ffffff);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 16px 0;
+}
+
+.custom-div:hover {
+    background: linear-gradient(to bottom, #dbeafe, #ffffff);
+    transform: scale(1.02);
+}
+
+/* Hidden input for file upload */
+.hidden-input {
+    display: none;
+}
+
+/* File upload icon */
+.imgupdate {
+    width: 120px;
+    height: 120px;
+}
+
+/* Container for file name and remove button */
+.archivonombre {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: 2px dashed #4caf50;
+    border-radius: 5px;
+    background-color: #E0F6E5;
+    opacity: 86%;
+    color: #1E3A8A;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* File name */
+.archivonombre .file-name {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    color: #1E3A8A;
+}
+
+/* Remove button */
+.delete-button {
+    margin-right: 10px;  
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2px 10px;
+    font-size: 14px;
+}
+
+/* Span icon */
+.spanicono {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 3px;
+    display: flex;
+    gap: 10px;
+}
+.codigo-ficha {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #1E3A8A;
+    font-weight: bold;
+}
+/* Continue button */
+.botonescontinuar {
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.botonescontinuar i {
+    margin-right: 8px;
+}
+
+.botonescontinuar:hover {
+    background-color: #45a049;
+}

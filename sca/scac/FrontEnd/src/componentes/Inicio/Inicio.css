@@ -1,0 +1,217 @@
+/* Contenedor Principal */
+.contenedorprincipal {
+    background-image: url('../../assets/img/senafondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px 0;
+    flex-wrap: wrap; /* Permite ajustar los elementos en pantallas pequeñas */
+    position: relative;
+    overflow: hidden; /* Evita que elementos sobresalgan */
+}
+
+/* Oscurecimiento del fondo */
+.contenedorprincipal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1); /* Oscurecimiento */
+    z-index: 0; /* Asegura que el oscurecimiento esté debajo de los componentes */
+}
+/* Campo de usuario con ícono */
+.icono-usuario {
+    background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/person.svg'); /* Ícono de usuario */
+}
+
+/* Campo de contraseña con ícono */
+.icono-contraseña {
+    background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/lock.svg'); /* Ícono de candado */
+}
+
+/* Al enfocar (opcional: para cambiar el borde) */
+.inputusuario:focus {
+    border-color: #0B1739;
+    box-shadow: 0 0 5px rgba(11, 23, 57, 0.5);
+}
+
+/* Contenedor de Login */
+.contenedorlogin {
+    position: relative;
+    margin-left: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 500px;
+    height: 480px;
+    z-index: 1; /* Por encima del fondo oscuro */
+}
+
+/* Contenedor de Inputs */
+.contenedorinputs {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(11 23 57 / 60%);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%; /* Se adapta al tamaño disponible */
+    max-width: 500px; /* Ancho máximo */
+    height: 450px;
+    gap: 20px; 
+    align-items: center;
+}
+
+/* Otros estilos */
+.tituloinputs {
+    text-align: center;
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.inputusuario {
+    width: 75%; /* Ajusta según el diseño */
+    padding: 10px 15px; /* Espaciado interno */
+    padding-left: 40px; /* Espacio para el ícono */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: #fff; /* Fondo blanco */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Posiciona el ícono */
+    background-size: 20px; /* Tamaño del ícono */
+}
+
+.inputusuario:focus {
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Botón */
+.buttoningresar {
+    width: 75%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0B1739;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.buttoningresar:hover {
+    background-color: #09223d;
+}
+
+/* Columna Derecha */
+.columnaderecha {
+    margin-right: 2%;
+    width: 550px;
+    height: 680px;
+    background: rgba(11, 23, 57, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Por encima del fondo */
+}
+
+/* Texto dentro de la columna derecha */
+.textocolumnaderecho {
+    width: 490px;
+    height: 500px;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+/* Imagen */
+.imgsenaverde {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Títulos */
+.titulosena {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .contenedorprincipal {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .contenedorlogin {
+        margin: 0;
+        width: 90%;
+        height: auto;
+    }
+
+    .columnaderecha {
+        margin: 20px 0;
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedorinputs {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .tituloinputs {
+        font-size: 20px;
+    }
+
+    .inputusuario {
+        font-size: 14px;
+    }
+
+    .buttoningresar {
+        font-size: 14px;
+    }
+
+    .columnaderecha {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .titulosena {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedorlogin, .columnaderecha {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contenedorinputs {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .tituloinputs {
+        font-size: 18px;
+    }
+
+    .inputusuario, .buttoningresar {
+        font-size: 12px;
+    }
+}
